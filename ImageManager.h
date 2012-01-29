@@ -16,6 +16,7 @@ class ImageManager {
     ImageManager();
     ~ImageManager();
 
+    void loadImage( const std::string & );
     const sf::Image & getImage( const std::string & );
 };
 

@@ -2,6 +2,9 @@
 #define __GAME_H__
 
 class ImageManager;
+class Tile;
+class PlayerEntity;
+class LevelBuilder;
 
 namespace sf {
   class Event;
@@ -13,10 +16,14 @@ namespace sf {
 class Game {
   private:
     ImageManager * imageManager;
-    sf::Sprite * sprite;
+    PlayerEntity * player;
     sf::View * view;
+    LevelBuilder * builder;
 
+    Tile * tileMap;
     sf::RenderWindow * window;
+    sf::RenderWindow * bigWindow;
+
     bool running;
 
     void init();
